@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{headline}}</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', sans-serif; color: #1a1a2e; background: #fff; }
+  .hero {
+    min-height: 100vh; display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(135deg, {{brandColor}} 0%, #764ba2 100%);
+    position: relative; overflow: hidden; padding: 2rem;
+  }
+  .hero::before {
+    content: ''; position: absolute; width: 200%; height: 200%; top: -50%; left: -50%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+    animation: pulse 4s ease-in-out infinite;
+  }
+  @keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.1); } }
+  .hero-content { position: relative; text-align: center; max-width: 800px; color: #fff; }
+  .hero-image {
+    max-width: 100%; border-radius: 16px; margin-bottom: 2rem;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  }
+  .hero h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 800; margin-bottom: 1rem; line-height: 1.1; }
+  .hero h2 { font-size: clamp(1.1rem, 2.5vw, 1.5rem); font-weight: 400; opacity: 0.9; margin-bottom: 2rem; }
+  .hero p { font-size: 1.1rem; opacity: 0.85; max-width: 600px; margin: 0 auto 2.5rem; line-height: 1.7; }
+  .cta-btn {
+    display: inline-block; padding: 1rem 3rem; background: #fff; color: {{brandColor}};
+    font-size: 1.1rem; font-weight: 700; border-radius: 50px; text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s; box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  }
+  .cta-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(0,0,0,0.3); }
+  .features {
+    display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;
+    padding: 5rem 2rem; max-width: 1000px; margin: 0 auto;
+  }
+  .feature {
+    flex: 1; min-width: 200px; text-align: center; padding: 2rem;
+    border-radius: 16px; background: #f8f9ff; transition: transform 0.3s; border: 1px solid #eee;
+  }
+  .feature:hover { transform: translateY(-5px); }
+  .feature-icon {
+    width: 60px; height: 60px; border-radius: 50%;
+    background: linear-gradient(135deg, {{brandColor}}, #764ba2);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 1rem; color: #fff; font-size: 1.5rem;
+  }
+  .feature h3 { font-size: 1.15rem; margin-bottom: 0.5rem; }
+</style>
+</head>
+<body>
+  <section class="hero">
+    <div class="hero-content">
+      <img class="hero-image" src="{{heroImage}}" alt="" onerror="this.style.display='none'">
+      <h1>{{headline}}</h1>
+      <h2>{{subheadline}}</h2>
+      <p>{{description}}</p>
+      <a href="{{ctaUrl}}" class="cta-btn">{{ctaText}}</a>
+    </div>
+  </section>
+  <section class="features">
+    <div class="feature">
+      <div class="feature-icon">&#9889;</div>
+      <h3>{{feature1}}</h3>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">&#128274;</div>
+      <h3>{{feature2}}</h3>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">&#128640;</div>
+      <h3>{{feature3}}</h3>
+    </div>
+  </section>
+</body>
+</html>

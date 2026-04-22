@@ -1,0 +1,6 @@
+@CxoTraining.Api_HostAddress = http://localhost:5234
+
+GET {{CxoTraining.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

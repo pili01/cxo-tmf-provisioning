@@ -1,0 +1,39 @@
+[
+  {
+    "id": "portfolio-creative",
+    "categoryId": "portfolio",
+    "name": "Creative Portfolio",
+    "description": "Artistic portfolio layout with elegant project showcasing",
+    "thumbnail": "",
+    "fields": [
+      { "name": "name", "label": "Your Name", "type": "text", "required": true, "placeholder": "Jane Doe" },
+      { "name": "title", "label": "Professional Title", "type": "text", "required": true, "placeholder": "Creative Designer & Developer" },
+      { "name": "bio", "label": "Bio", "type": "textarea", "required": true, "placeholder": "Tell your story..." },
+      { "name": "profileImage", "label": "Profile Image URL", "type": "url", "required": false, "placeholder": "https://example.com/photo.jpg" },
+      { "name": "email", "label": "Contact Email", "type": "email", "required": false, "placeholder": "jane@example.com" },
+      { "name": "accentColor", "label": "Accent Color", "type": "color", "required": false, "defaultValue": "#f5576c" }
+    ],
+    "htmlTemplate": "portfolio-creative.html"
+  },
+  {
+    "id": "portfolio-developer",
+    "categoryId": "portfolio",
+    "name": "Developer Portfolio",
+    "description": "Tech-focused portfolio with dark theme and code aesthetics",
+    "thumbnail": "",
+    "fields": [
+      { "name": "name", "label": "Your Name", "type": "text", "required": true, "placeholder": "John Smith" },
+      { "name": "title", "label": "Title", "type": "text", "required": true, "placeholder": "Full Stack Developer" },
+      { "name": "bio", "label": "About", "type": "textarea", "required": true, "placeholder": "Passionate developer building..." },
+      { "name": "profileImage", "label": "Profile Image URL", "type": "url", "required": false, "placeholder": "https://example.com/photo.jpg" },
+      { "name": "skill1", "label": "Skill 1", "type": "text", "required": false, "placeholder": "Angular", "defaultValue": "Angular" },
+      { "name": "skill2", "label": "Skill 2", "type": "text", "required": false, "placeholder": ".NET", "defaultValue": ".NET" },
+      { "name": "skill3", "label": "Skill 3", "type": "text", "required": false, "placeholder": "Docker", "defaultValue": "Docker" },
+      { "name": "skill4", "label": "Skill 4", "type": "text", "required": false, "placeholder": "Azure", "defaultValue": "Azure" },
+      { "name": "githubUrl", "label": "GitHub URL", "type": "url", "required": false, "placeholder": "https://github.com/username" },
+      { "name": "linkedinUrl", "label": "LinkedIn URL", "type": "url", "required": false, "placeholder": "https://linkedin.com/in/username" },
+      { "name": "email", "label": "Email", "type": "email", "required": false, "placeholder": "john@example.com" }
+    ],
+    "htmlTemplate": "portfolio-developer.html"
+  }
+]

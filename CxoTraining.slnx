@@ -1,0 +1,9 @@
+<Solution>
+  <Project Path="CxoTraining.Api/CxoTraining.Api.csproj" Id="af660691-2a99-4459-993c-b55ce1c0c669" />
+  <Project Path="CxoTraining.Data/CxoTraining.Infrastructure.csproj" />
+  <Project Path="CxoTraining.Domain/CxoTraining.Domain.csproj" />
+  <Project Path="CxoTraining.Services/CxoTraining.Application.csproj" />
+  <Project Path="docker-compose.dcproj">
+    <Build />
+  </Project>
+</Solution>

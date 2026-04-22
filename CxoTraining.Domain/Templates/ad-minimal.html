@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{headline}}</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font-family: 'Inter', sans-serif; background: {{bgColor}}; color: #fff; min-height: 100vh; }
+      .container {
+        min-height: 100vh; display: flex; flex-direction: column;
+        align-items: center; justify-content: center; padding: 3rem 2rem; text-align: center;
+      }
+      .logo { max-height: 60px; margin-bottom: 3rem; }
+      h1 {
+        font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 700; margin-bottom: 1.5rem;
+        background: linear-gradient(90deg, #fff, {{accentColor}});
+        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+      }
+      p { font-size: 1.2rem; max-width: 550px; opacity: 0.7; line-height: 1.8; margin-bottom: 3rem; font-weight: 300; }
+      .cta {
+        display: inline-block; padding: 1rem 3rem;
+        border: 2px solid {{accentColor}}; color: {{accentColor}};
+        font-size: 1rem; font-weight: 500; border-radius: 50px; text-decoration: none; transition: all 0.3s;
+      }
+      .cta:hover { background: {{accentColor}}; color: {{bgColor}}; }
+      .line { width: 60px; height: 2px; background: {{accentColor}}; margin: 3rem auto 0; opacity: 0.5; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img
+        class="logo"
+        src="{{logoUrl}}"
+        alt=""
+        onerror="this.style.display = 'none'"
+      />
+      <h1>{{headline}}</h1>
+      <p>{{description}}</p>
+      <a href="{{ctaUrl}}" class="cta">{{ctaText}}</a>
+      <div class="line"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+[
+  {
+    "id": "product-saas",
+    "categoryId": "product",
+    "name": "SaaS Showcase",
+    "description": "Modern SaaS product page with features and pricing highlights",
+    "thumbnail": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&h=250&fit=crop",
+    "fields": [
+      { "name": "productName", "label": "Product Name", "type": "text", "required": true, "placeholder": "CloudSync Pro" },
+      { "name": "tagline", "label": "Tagline", "type": "text", "required": true, "placeholder": "Sync everything, everywhere" },
+      { "name": "description", "label": "Description", "type": "textarea", "required": true, "placeholder": "Describe your product..." },
+      { "name": "heroImage", "label": "Product Image URL", "type": "url", "required": false, "placeholder": "https://example.com/product.png" },
+      { "name": "feature1Title", "label": "Feature 1 Title", "type": "text", "required": false, "placeholder": "Real-time Sync" },
+      { "name": "feature1Desc", "label": "Feature 1 Description", "type": "text", "required": false, "placeholder": "Keep all your devices in perfect harmony" },
+      { "name": "feature2Title", "label": "Feature 2 Title", "type": "text", "required": false, "placeholder": "End-to-End Encryption" },
+      { "name": "feature2Desc", "label": "Feature 2 Description", "type": "text", "required": false, "placeholder": "Your data is always protected" },
+      { "name": "feature3Title", "label": "Feature 3 Title", "type": "text", "required": false, "placeholder": "Team Collaboration" },
+      { "name": "feature3Desc", "label": "Feature 3 Description", "type": "text", "required": false, "placeholder": "Work together seamlessly" },
+      { "name": "price", "label": "Price", "type": "text", "required": false, "placeholder": "$9.99/mo", "defaultValue": "$9.99/mo" },
+      { "name": "ctaText", "label": "CTA Button Text", "type": "text", "required": true, "placeholder": "Start Free Trial", "defaultValue": "Start Free Trial" },
+      { "name": "ctaUrl", "label": "CTA Link", "type": "url", "required": true, "placeholder": "https://your-app.com/signup" },
+      { "name": "primaryColor", "label": "Primary Color", "type": "color", "required": false, "defaultValue": "#4facfe" }
+    ],
+    "htmlTemplate": "product-saas.html"
+  },
+  {
+    "id": "product-physical",
+    "categoryId": "product",
+    "name": "Product Launch",
+    "description": "Stunning product launch page for physical or digital products",
+    "thumbnail": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=250&fit=crop",
+    "fields": [
+      { "name": "productName", "label": "Product Name", "type": "text", "required": true, "placeholder": "Premium Headphones" },
+      { "name": "tagline", "label": "Tagline", "type": "text", "required": true, "placeholder": "Sound Redefined" },
+      { "name": "description", "label": "Description", "type": "textarea", "required": true, "placeholder": "Describe your product..." },
+      { "name": "productImage", "label": "Product Image URL", "type": "url", "required": false, "placeholder": "https://example.com/product.png" },
+      { "name": "price", "label": "Price", "type": "text", "required": false, "placeholder": "$299", "defaultValue": "$299" },
+      { "name": "spec1", "label": "Spec 1", "type": "text", "required": false, "placeholder": "40h Battery Life" },
+      { "name": "spec2", "label": "Spec 2", "type": "text", "required": false, "placeholder": "Active Noise Cancelling" },
+      { "name": "spec3", "label": "Spec 3", "type": "text", "required": false, "placeholder": "Hi-Res Audio Certified" },
+      { "name": "buyUrl", "label": "Buy Link", "type": "url", "required": true, "placeholder": "https://store.example.com" },
+      { "name": "accentColor", "label": "Accent Color", "type": "color", "required": false, "defaultValue": "#00f2fe" }
+    ],
+    "htmlTemplate": "product-physical.html"
+  }
+]

@@ -1,0 +1,39 @@
+[
+  {
+    "id": "ad-bold",
+    "categoryId": "advertisement",
+    "name": "Bold Launch",
+    "description": "High-impact landing page with bold typography and strong call-to-action",
+    "thumbnail": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop",
+    "fields": [
+      { "name": "headline", "label": "Headline", "type": "text", "required": true, "placeholder": "Your Amazing Product" },
+      { "name": "subheadline", "label": "Subheadline", "type": "text", "required": true, "placeholder": "The future of innovation starts here" },
+      { "name": "description", "label": "Description", "type": "textarea", "required": true, "placeholder": "Describe your product or service..." },
+      { "name": "ctaText", "label": "Button Text", "type": "text", "required": true, "placeholder": "Get Started Now", "defaultValue": "Get Started Now" },
+      { "name": "ctaUrl", "label": "Button Link", "type": "url", "required": true, "placeholder": "https://your-link.com" },
+      { "name": "heroImage", "label": "Hero Image URL", "type": "url", "required": false, "placeholder": "https://example.com/hero.jpg" },
+      { "name": "brandColor", "label": "Brand Color", "type": "color", "required": false, "defaultValue": "#667eea" },
+      { "name": "feature1", "label": "Feature 1", "type": "text", "required": false, "placeholder": "Lightning Fast" },
+      { "name": "feature2", "label": "Feature 2", "type": "text", "required": false, "placeholder": "Secure & Reliable" },
+      { "name": "feature3", "label": "Feature 3", "type": "text", "required": false, "placeholder": "24/7 Support" }
+    ],
+    "htmlTemplate": "ad-bold.html"
+  },
+  {
+    "id": "ad-minimal",
+    "categoryId": "advertisement",
+    "name": "Minimal Promo",
+    "description": "Clean, minimal design focusing on clarity and elegance",
+    "thumbnail": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop",
+    "fields": [
+      { "name": "headline", "label": "Headline", "type": "text", "required": true, "placeholder": "Simple. Elegant. Powerful." },
+      { "name": "description", "label": "Description", "type": "textarea", "required": true, "placeholder": "A brief description of what you offer..." },
+      { "name": "ctaText", "label": "Button Text", "type": "text", "required": true, "placeholder": "Learn More", "defaultValue": "Learn More" },
+      { "name": "ctaUrl", "label": "Button Link", "type": "url", "required": true, "placeholder": "https://your-link.com" },
+      { "name": "logoUrl", "label": "Logo URL", "type": "url", "required": false, "placeholder": "https://example.com/logo.png" },
+      { "name": "bgColor", "label": "Background Color", "type": "color", "required": false, "defaultValue": "#0f0f23" },
+      { "name": "accentColor", "label": "Accent Color", "type": "color", "required": false, "defaultValue": "#00d4ff" }
+    ],
+    "htmlTemplate": "ad-minimal.html"
+  }
+]

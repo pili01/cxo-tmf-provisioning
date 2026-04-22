@@ -1,0 +1,58 @@
+<div class="selector-page">
+  <div class="page-header">
+    <button class="back-btn" (click)="goBack()">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="19" y1="12" x2="5" y2="12"></line>
+        <polyline points="12 19 5 12 12 5"></polyline>
+      </svg>
+      <span>Back</span>
+    </button>
+    @if (category) {
+      <div class="header-info">
+        <h1>{{ category.name }}</h1>
+        <p>{{ category.description }}</p>
+      </div>
+    }
+  </div>
+
+  @if (loading()) {
+    <div class="loading">
+      <div class="spinner"></div>
+      <p>Loading templates...</p>
+    </div>
+  } @else {
+    <div class="template-grid">
+      @for (template of templates; track template.id) {
+        <div class="template-card" (click)="selectTemplate(template.id)">
+          @if (useLivePreview) {
+            <div class="template-live-preview">
+              <iframe
+                class="preview-iframe"
+                [srcdoc]="livePreviewHtml(template)"
+                title="Preview: {{ template.name }}"
+                sandbox="allow-scripts allow-same-origin"
+              ></iframe>
+              <div class="template-overlay">
+                <button type="button" class="select-btn">Use this template</button>
+              </div>
+            </div>
+          } @else {
+            <div class="template-thumbnail">
+              <img [src]="template.thumbnail" [alt]="template.name" />
+              <div class="template-overlay">
+                <button type="button" class="select-btn">Use this template</button>
+              </div>
+            </div>
+          }
+          <div class="template-info">
+            <h3>{{ template.name }}</h3>
+            <p>{{ template.description }}</p>
+            <div class="template-meta">
+              <span class="field-count">{{ (template.fields || []).length }} customizable fields</span>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  }
+</div>
