@@ -15,6 +15,7 @@ public class ProvisioningServiceWorkflowInput : WorkflowInput<ProvisioningServic
 {
     [JsonPropertyName("prepare_output")]
     public required ValidationWorkflowOutput ServiceData { get; set; }
+    public required string ServiceId { get; set; }
 }
 
 public class ProvisioningServiceWorkflowOutput : WorkflowOutput
@@ -46,7 +47,8 @@ public class ProvisioningServiceWorkflow : Workflow<ProvisioningServiceWorkflow,
             wf => wf.SubmitResourceOrder,
             wf => new SubmitResourceInput
             {
-                FileName = wf.StoreHtml.Output.fileName
+                FileName = wf.StoreHtml.Output.fileName,
+                ServiceId = wf.Input.ServiceId,
             });
         _builder.SetOutput(wf => new ProvisioningServiceWorkflowOutput
         {

@@ -14,6 +14,7 @@ namespace CxoTraining.Application.Workers;
 public record SubmitResourceInput() : IRequest<SubmitResourceOutput>
 {
     public string FileName { get; init; }
+    public string ServiceId { get; init; }
 }
 
 public record SubmitResourceOutput();
@@ -50,6 +51,15 @@ public class SubmitResourceOrderWorker(IResourceOrderingManagement4ApiClient _re
                         },
                     ResourceCharacteristic = characteristics
                     },
+                }
+            ],
+            ExternalReference =
+            [
+                new ExternalId
+                {
+                    Id = request.ServiceId,
+                    EntityType = "ServiceId",
+                    Owner = "ServiceInventory"
                 }
             ]
         };

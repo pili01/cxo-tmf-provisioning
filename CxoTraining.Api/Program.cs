@@ -45,6 +45,7 @@ builder.Services.RegisterWorkerTask<SendNotificationEmailWorker>();
 builder.Services.RegisterWorkerTask<StoreHtmlWorker>();
 builder.Services.RegisterWorkerTask<SubmitOrderWorker>();
 builder.Services.RegisterWorkerTask<ValidateCharacteristicsWorker>();
+builder.Services.RegisterWorkerTask<ConnectServiceWithResourceWorker>();
 
 builder.Services.RegisterWorkflow<ValidationWorkflow>();
 builder.Services.RegisterWorkflow<ProvisioningServiceWorkflow>();

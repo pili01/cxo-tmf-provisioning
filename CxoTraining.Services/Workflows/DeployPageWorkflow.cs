@@ -10,6 +10,7 @@ namespace CxoTraining.Application.Workflows;
 public class DeployPageWorkflowInput : WorkflowInput<DeployPageWorkflowOutput>
 {
     public required string ResourceId { get; set; }
+    public required string OrderId { get; set; }
 }
 
 public class DeployPageWorkflowOutput : WorkflowOutput
@@ -24,6 +25,8 @@ public class DeployPageWorkflow : Workflow<DeployPageWorkflow, DeployPageWorkflo
 
     public LaunchNginxWorker LaunchNginx { get; set; }
     public SendNotificationEmailWorker SendNotificationEmail { get; set; }
+
+    public ConnectServiceWithResourceWorker ConnectServiceWithResource { get; set; }
 
     public override void BuildDefinition()
     {
@@ -42,6 +45,13 @@ public class DeployPageWorkflow : Workflow<DeployPageWorkflow, DeployPageWorkflo
                 ToName = "Nije ni bitno",
                 Body = $"Page deployed successfull​y on URL: {wf.LaunchNginx.Output.Url}",
                 Subject = "Page hosting"
+            });
+        _builder.AddTask(
+            wf => wf.ConnectServiceWithResource,
+            wf => new ConnectServiceWithResourceInput
+            {
+                ResourceId = wf.Input.ResourceId,
+                OrderId = wf.Input.OrderId
             });
         _builder.SetOutput(
             wf => new DeployPageWorkflowOutput
